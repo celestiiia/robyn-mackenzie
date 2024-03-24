@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8" />
-	<title>Your Name Here | Contact</title>
+	<title>Robyn Mackenzie | Contact</title>
 	<link href="style.css" rel="stylesheet">
+	<script src="navbar.js"></script>
 </head>
+
 <body>
 
-<div class="container contact">
+	<div class="container home">
 
-<nav>
-	<h1><a href="index.html">Your Name Here</a></h1> 
-	<ul>
-		<li><a href="projects.html">Projects</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
-</nav> <!-- end nav -->
+		<nav class="main-nav" role="navigation">
 
+			<div class="brand">
+				<a href="index.html"><img src="https://placehold.co/175x75" /></a>
+			</div>
 
-<h2>Contact</h2>
+			<div class="burger">
+				<a role="button" class="burger-button" aria-expanded="false" data-target="menu-links">
+					<svg width="50" height="50" viewBox="0 0 100 100">
+						<path class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+						<path class="line line2" d="M 20,50 H 80" />
+						<path class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+					</svg>
+				</a>
+			</div>
 
+			<div id="menu-links" class="links-list" aria-expanded="false" aria-label="main menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
 
-<p>Get in touch!</p>
+		</nav> <!-- end nav -->
 
-<p>Email: <a href="mailto:#">name@email.co.uk</a></p>
+		<section class="header">
+			<h2>CONTACT</h2>
+		</section>
 
-
-</div> <!-- end of container -->
 
 </body>
+
 </html>
