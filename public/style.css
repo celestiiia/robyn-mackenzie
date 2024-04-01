@@ -12,7 +12,7 @@ html { font-size: 16px; }
 body, div, ul, li, img, video, section, figure, figcaption, main, footer, 
 h1, h2, h3, p, a { margin: 0; padding: 0; border: 0; }
 
-body { background: #e4e4e4; }
+body { background: #F5F5F5; color: #2b2d42;}
 
 
 /*  this sets page width: 60em = 960px,  80 = 1280px, 90 = 1440px
@@ -23,28 +23,37 @@ body { background: #e4e4e4; }
 
 /* example web font styles using IBM Plex Sans
 --------------------------------------------------------------------------------------- */
+/* archivo-regular - latin */
 @font-face {
-	font-family: Plex;
-	src: url(fonts/IBM-Plex-Sans/IBMPlexSans-Regular.woff2);
-	font-weight: normal;
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/archivo-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* archivo-italic - latin */
 @font-face {
-	font-family: Plex-Bold;
-	src: url(fonts/IBM-Plex-Sans/IBMPlexSans-Bold.woff2);
-	font-weight: bold;
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Archivo';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/archivo-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* tenor-sans-regular - latin */
 @font-face {
-	font-family: Plex-Italic;
-	src: url(fonts/IBM-Plex-Sans/IBMPlexSans-Italic.woff2);
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Tenor Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/tenor-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
-body		{ font-family: Plex, Arial, sans-serif; }
-h1, h2, h3	{ font-family: Plex-Bold, Arial, sans-serif; }
-p			{ font-family: Plex, Arial, sans-serif; }
-figcaption	{ font-family: Plex-Italic, Arial, sans-serif; }
+body		{ font-family: Tenor Sans, Arial, sans-serif; }
+h1, h2, h3	{ font-family: Archivo, Arial, sans-serif; }
+p			{ font-family: Archivo, Arial, sans-serif; }
+figcaption	{ font-family: Archivo-Italic, Arial, sans-serif; }
 
 
 /*  default paragraph styling
@@ -58,15 +67,15 @@ p {font-size: 1.5rem; line-height: 1.375em;}
 
 /*  link styling
 --------------------------------------------------------------------------------------- */
-a {color: #00e; text-decoration: none;}
-a:visited {color: #00e;}
-a:hover {color: #e0e; text-decoration: underline;}
-a:active {color: #0e0;}
+a {color: #2b2d42; text-decoration: none;}
+a:visited {color: #2b2d42;}
+a:hover {color: #B6B8CF; text-decoration: underline;}
+a:active {color: #2A2C41;}
 
-nav a {color: #00e; text-decoration: none;}
-nav a:visited {color: #00e;}
-nav a:hover {color: #e0e; text-decoration: underline;}
-nav a:active {color: #0e0;}
+nav a {color: #2b2d42; text-decoration: none;}
+nav a:visited {color: #2b2d42;}
+nav a:hover {color: #B6B8CF; text-decoration: underline;}
+nav a:active {color: #2A2C41;}
 
 /* ------------------------------------------------------------------------------------
 tag and title styling (default / mobile)
@@ -81,10 +90,19 @@ ul.tags li {display: inline; font-size: 1.3rem;
 	margin-right: 12px;
 	border-radius: 30px;
 	margin-bottom: 5px;
+	border: 1px #2b2d42 solid;
  white-space: nowrap;}
-li.tag1 {background-color: cadetblue;}
-li.tag2 {background-color:coral;}
-li.tag3 {background-color: rgb(92,243, 152);}
+li.tag1 {background-color:#717394;}
+li.tag2 {background-color:#F6F6F3;}
+li.tag3 {background-color:#B6B8CF;}
+li.tag4 {background-color:#D8D77A;}
+li.tag5 {background-color:#D0B317;}
+li.tag6 {background-color:#bab600;}
+li.tag7 {background-color:#efab00;}
+li.tag8 {background-color:#E6743A;}
+li.tag9 {background-color:#eb9b8e;}
+li.tag10 {background-color:#ea5460;}
+
 
 /* ------------------------------------------------------------------------------------
 top navigation section (default / mobile)
@@ -100,7 +118,7 @@ nav.main-nav {
 	padding: .5rem; 
 	min-height: 2rem; 
 	background-color: transparent;
-	border-bottom: 1px black solid;
+	border-bottom: 1px #2A2C41 solid;
 	align-items: center;
 }
 
@@ -116,13 +134,13 @@ nav ul li	{
 	font-size: 1.75rem; 
 	text-align: center; 
 	border: none; 
-	border-bottom: 1px black solid;
+	border-bottom: 1px #2A2C41 solid;
 }
 
 nav ul li:first-of-type {
 	border: none;
-	border-bottom: 1px black solid;
-	border-top: 1px black solid;
+	border-bottom: 1px #2A2C41 solid;
+	border-top: 1px #2A2C41 solid;
 }
 
 /*  hamburger styles and css anim */
@@ -130,7 +148,7 @@ nav ul li:first-of-type {
 
 .line {
 	fill: none;
-	stroke: black;
+	stroke: #2b2d44;
 	stroke-width: 6;
 	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
 		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -208,9 +226,10 @@ article.project .proj-image {grid-area: pimage;}
 
 article.project .proj-deets {
 	grid-area: ptext; 
-	background-color: #ffffff; 
+	background-color: #FBFBF9; 
 	padding: 1rem;
-	padding-top: 3rem; 
+	padding-top: 20%; 
+	padding-bottom: 20%;
 	border-radius: 0px; 
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -223,7 +242,6 @@ article.project .proj-image img {
 	border-radius: 0px;
 	border-top-left-radius: 8px; 
 	border-top-right-radius: 8px; 
-	height: 450px; 
 	object-fit: cover;
 	display: block; 
 	width: 100%;
@@ -255,7 +273,7 @@ section.summary .title-tags {
 	padding-bottom: 3rem;
 	border: 0;
 	border-radius: 0px;
-	border-bottom: 1px black solid;
+	border-bottom: 1px #2A2C41 solid;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
@@ -300,7 +318,7 @@ IMPORTANT: media query - switches on grid layout if page width is wider than 768
 ----------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------- */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: landscape) {
 
 
 /*  IMPORTANT: min-width:60em rule will stop the container from resizing  
@@ -351,8 +369,8 @@ nav ul li {
 
 nav ul li:first-of-type {
 	border: none;
-	border-right: 1px black solid;
-	border-left: 1px black solid;
+	border-right: 1px #2A2C41 solid;
+	border-left: 1px #2A2C41 solid;
 	}
 
 /* ------------------------------------------------------------------------------------ 
@@ -361,7 +379,7 @@ New project section styles for home page (>768px screens)
 
 article.project {
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	grid-column-gap: 0rem;
 	grid-template-areas:
@@ -393,7 +411,7 @@ Project summary section for project pages (>768 screens)
 
 section.summary {
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		grid-column-gap: 0rem;
 	grid-template-areas:
@@ -433,7 +451,7 @@ Project summary section for project pages (>768 screens)
 
 section.gallery {
 	display: grid;
-	grid-template-rows: repeat(8, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 2rem;
 	margin-top: 1rem;
