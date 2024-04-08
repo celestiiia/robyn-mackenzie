@@ -183,11 +183,11 @@ New header section styles for home page (default / mobile)
 --------------------------------------------------------------------------------------- */
 
 section.header {
- display: grid;
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 8fr 2fr;
 	grid-template-areas:
-	  "head"
+		"head"
 			"lnk";
 	height: 600px;
 	align-items: center;
@@ -210,7 +210,7 @@ New project section styles for home page (default / mobile)
 
 article.project {
 	display: grid;
-	grid-template-rows: 6fr 4fr;
+	grid-template-rows: auto;
 	grid-template-columns: auto;
 	grid-row-gap: 0rem;
 	grid-template-areas:
@@ -228,8 +228,8 @@ article.project .proj-deets {
 	grid-area: ptext; 
 	background-color: #FBFBF9; 
 	padding: 1rem;
-	padding-top: 20%; 
-	padding-bottom: 20%;
+	padding-top: 4rem;
+	padding-bottom: 4rem; 
 	border-radius: 0px; 
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -242,6 +242,7 @@ article.project .proj-image img {
 	border-radius: 0px;
 	border-top-left-radius: 8px; 
 	border-top-right-radius: 8px; 
+
 	object-fit: cover;
 	display: block; 
 	width: 100%;
@@ -331,7 +332,7 @@ IMPORTANT: media query - switches on grid layout if page width is wider than 768
 
 
 /* ------------------------------------------------------------------------------------
-	 top navigation styles (>768px screens)
+	top navigation styles (>768px screens)
 --------------------------------------------------------------------------------------- */	
 	
 		nav.main-nav {
@@ -399,10 +400,14 @@ article.project .proj-image img {
 
 article.project .proj-deets{
 	grid-area: ptext;
-	border: none;
-	border-radius: 0px;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    align-content: center;
+    min-height: 300px
 }
 
 /* ------------------------------------------------------------------------------------
@@ -449,6 +454,7 @@ section.summary .proj-brief {
 Project summary section for project pages (>768 screens)
 --------------------------------------------------------------------------------------- */
 
+
 section.gallery {
 	display: grid;
 	grid-template-rows: repeat(5, 1fr);
@@ -468,7 +474,7 @@ grid-row-end: 2;
 }
 
 section.gallery figure:nth-child(2) {
-	 grid-row-start: 1;
+	grid-row-start: 1;
 		grid-column-start: 3;
 		grid-column-end: 5;
 		grid-row-end: 3;
