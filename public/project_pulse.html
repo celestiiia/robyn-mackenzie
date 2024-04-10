@@ -1,139 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robyn Mackenzie | Portfolio</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="navbar.js"></script>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Robyn Mackenzie | Portfolio</title>
-	<link href="style.css" rel="stylesheet">
-	<script src="navbar.js"></script>
-</head>
+  <body>
+    <div class="container">
+      <nav class="main-nav" role="navigation">
+        <div class="brand">
+          <a href="index.html"
+            ><img
+              src="logo.svg"
+              alt="triangle with all three sides equal"
+              height="75px"
+              width="175px"
+            />
+          </a>
+        </div>
 
-<body>
+        <div class="burger">
+          <a
+            role="button"
+            class="burger-button"
+            aria-expanded="false"
+            data-target="menu-links"
+          >
+            <svg width="50" height="50" viewBox="0 0 100 100">
+              <path
+                class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path
+                class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              />
+            </svg>
+          </a>
+        </div>
 
-	<section class="container home">
+        <div
+          id="menu-links"
+          class="links-list"
+          aria-expanded="false"
+          aria-label="main menu"
+        >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end nav -->
 
-		<nav class="main-nav" role="navigation">
+      <section class="summary">
+        <div class="title-tags">
+          <h1 class="proj-title">//pulse</h1>
+          <ul class="tags">
+            <li class="tag7">graphics</li>
+            <li class="tag10">user research</li>
+            <li class="tag6">experience design</li>
+            <li class="tag1">branding & comms</li>
+          </ul>
+        </div>
+        <div class="proj-brief">
+          <p>
+            aub X imagination brief<br />
+            part 1; reimagine your given object in a post growth society<br />
+            part 2: brand your concept<br />
+            collaboration with; louise andrews, scarlet shepherd, liam heisig
+          </p>
+        </div>
+      </section>
 
-			<div class="brand">
-				<a href="index.html"><img 
-					src="logo.svg" 
-					alt="triangle with all three sides equal"
-					height="75px"
-					width="175px" />
-				</a>
-				
-			</div>
+      <section class="case-study">
+        <h3>the project part i;</h3>
+        <p>
+          This project was completely up my street. We initially started with
+          more conceptual work, in a group of 4 we had to use the Post Growth
+          Toolkit to reimagine our given object in a post-growth society. Our
+          given object was MRI scanners, and as you can see from the process
+          pages, it was quite the journey from the MRI scanner to a new approach
+          healthcare system.
+        </p>
 
-			<div class="burger">
-				<a role="button" class="burger-button" aria-expanded="false" data-target="menu-links">
-					<svg width="50" height="50" viewBox="0 0 100 100">
-						<path class="line line1"
-							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-						<path class="line line2" d="M 20,50 H 80" />
-						<path class="line line3"
-							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-					</svg>
-				</a>
-			</div>
+        <p>
+          This project helped to solidify my passion for research and conceptual
+          design, creating a tangible system that does good. Digital and design
+          transformation is at the core of the projects that interest me.
+        </p>
+        <br />
+        <br />
+        <h3>the project part ii;</h3>
+        <p>
+          The branding of this concept was truly fun. We were lucky enough to
+          get to speak to the team at Imagination, Wes and Becca, to get
+          feedback throughout the branding process on what ideas would work
+          best.
+        </p>
 
-			<div id="menu-links" class="links-list" aria-expanded="false" aria-label="main menu">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
+        <p>
+          We came up with individual initial ideas, my main approach was a
+          mascot-focused design, I wanted to make it youthful and fun, a direct
+          contrast to current healthcare approaches. Using a dog as the mascot
+          was a way to foster a sense of loyalty from the start, and pose the
+          brand as a trustworthy friend. I utilised both bright and pastel
+          colours, each focused on a different aspect of wellbeing.
+        </p>
 
-		</nav> <!-- end nav -->
+        <p>
+          My mascot design and logo were not ultimately selected, however, my
+          wordmark, primary typeface and colour palette were! This was combined
+          with a fellow team member's logo and secondary typeface to make up our
+          final brand. We collaborated and tested different uses as a group and
+          created our end presentation. I mainly focused on the creation of copy
+          for mockups, brand partnerships, and a website mockup for this, as
+          well as the editorial of the presentation itself. The presentation was
+          very well received and was a great taste of pitching in a professional
+          environment.
+        </p>
+      </section>
+      <section class="gallery">
+        <figure>
+          <img src="https://placehold.co/600x400/orange/white?text=*" alt="" />
+          <figcaption>image 1</figcaption>
+        </figure>
 
-		<section class="summary">
-			<div class="title-tags">
-				<h1 class="proj-title">//pulse</h1>
-				<ul class="tags">
-					<li class="tag7">graphics</li>
-					<li class="tag10">user research</li>
-					<li class="tag6">experience design</li>
-					<li class="tag1">branding & comms</li>
-				</ul>
-			</div>
-			<div class="proj-brief">
-				<p>aub X imagination brief<br>
-					part 1; reimagine your given object in a post growth society<br>
-					part 2: brand your concept<br>
-					collaboration with; louise andrews, scarlet shepherd, liam heisig
-					</p>
-			</div>
-		</section>
+        <figure>
+          <img src="https://placehold.co/400x600/blue/white?text=*" alt="" />
+          <figcaption>image 2</figcaption>
+        </figure>
 
-			<section class="case-study">
-				<h3>Part i</h3>
-				<p>This project was completely up my street. We initially started with more conceptual work, in a group 
-					of 4 we had to use the Post Growth Toolkit to reimagine our given object in a post-growth society.
-					Our given object was MRI scanners, and as you can see from the process pages, it was quite the journey 
-					from the MRI scanner to a new approach healthcare system. </p>
-					
-				<p>This project helped to solidify my passion for research and conceptual design, creating a tangible 
-					system that does good. Digital and design transformation is at the core of the projects that 
-					interest me.</p>
-				<br>
-				<br>
-					<h3>Part ii</h3>
-				<p>The branding of this concept was truly fun. We were lucky enough to get to speak to the team at 
-					Imagination, Wes and Becca, to get feedback throughout the branding process on what ideas 
-					would work best. </p>
+        <figure>
+          <img src="https://placehold.co/600x400/red/white?text=*" alt="" />
+          <figcaption>image 3</figcaption>
+        </figure>
 
-				<p>We came up with individual initial ideas, my main approach was a mascot-focused design, I wanted to make 
-					it youthful and fun, a direct contrast to current healthcare approaches. Using a dog as the mascot was 
-					a way to foster a sense of loyalty from the start, and pose the brand as a trustworthy friend. I utilised 
-					both bright and pastel colours, each focused on a different aspect of wellbeing. </p>
+        <figure>
+          <img src="https://placehold.co/600x400/khaki/white?text=*" alt="" />
+          <figcaption>image 4</figcaption>
+        </figure>
 
-				<p>My mascot design and logo were not ultimately selected, however, my wordmark, primary typeface and colour
-					palette were! This was combined with a fellow team member's logo and secondary typeface to make up our 
-					final brand. We collaborated and tested different uses as a group and created our end presentation. I 
-					mainly focused on the creation of copy for mockups, brand partnerships, and a website mockup for this, 
-					as well as the editorial of the presentation itself. The presentation was very well received and was a 
-					great taste of pitching in a professional environment. </p>
-			
-		</section>
-		<section class="gallery">
+        <figure>
+          <img
+            src="https://placehold.co/600x400/chocolate/white?text=*"
+            alt=""
+          />
+          <figcaption>image 5</figcaption>
+        </figure>
 
-			<figure>
-				<img src="https://placehold.co/600x400/orange/white?text=*" alt="">
-				<figcaption>image 1</figcaption>
-			</figure>
-
-			<figure>
-				<img src="https://placehold.co/400x600/blue/white?text=*" alt="">
-				<figcaption>image 2</figcaption>
-			</figure>
-
-			<figure>
-				<img src="https://placehold.co/600x400/red/white?text=*" alt="">
-				<figcaption>image 3</figcaption>
-			</figure>
-
-			<figure>
-				<img src="https://placehold.co/600x400/khaki/white?text=*" alt="">
-				<figcaption>image 4</figcaption>
-			</figure>
-
-			<figure>
-				<img src="https://placehold.co/600x400/chocolate/white?text=*" alt="">
-				<figcaption>image 5</figcaption>
-			</figure>
-
-			<figure>
-				<img src="https://placehold.co/600x400/darkcyan/white?text=*" alt="">
-				<figcaption>image 6</figcaption>
-			</figure>
-
-		</section>
-
-		</section>
-
-		
-
-</body>
-
+        <figure>
+          <img
+            src="https://placehold.co/600x400/darkcyan/white?text=*"
+            alt=""
+          />
+          <figcaption>image 6</figcaption>
+        </figure>
+      </section>
+    </div>
+  </body>
 </html>

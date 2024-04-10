@@ -1,253 +1,374 @@
 /*  all the em measurements start from this setting
 --------------------------------------------------------------------------------------- */
-html { font-size: 16px; }
-
+html {
+  font-size: 16px;
+}
 
 /*  global styles to reset default values
 --------------------------------------------------------------------------------------- */
 *,
 *:before,
-*:after { box-sizing: border-box; }
+*:after {
+  box-sizing: border-box;
+}
 
-body, div, ul, li, img, video, section, figure, figcaption, main, footer, 
-h1, h2, h3, p, a { margin: 0; padding: 0; border: 0; }
+body,
+div,
+ul,
+li,
+img,
+video,
+section,
+figure,
+figcaption,
+main,
+footer,
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-body { background: #F5F5F5; color: #2b2d42;}
-
+body {
+  background: #f5f5f5;
+  color: #2b2d42;
+}
 
 /*  this sets page width: 60em = 960px,  80 = 1280px, 90 = 1440px
 --------------------------------------------------------------------------------------- */
-.container { max-width: 80rem; }
-.container { margin: 0 auto; }
-
+.container {
+  max-width: 80rem;
+}
+.container {
+  margin: 0 auto;
+}
 
 /* example web font styles using IBM Plex Sans
 --------------------------------------------------------------------------------------- */
 /* archivo-regular - latin */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'Archivo';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/archivo-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/archivo-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* archivo-italic - latin */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'Archivo';
-	font-style: italic;
-	font-weight: 400;
-	src: url('../fonts/archivo-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Archivo";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/archivo-v19-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* tenor-sans-regular - latin */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'Tenor Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/tenor-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/tenor-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-body		{ font-family: Tenor Sans, Arial, sans-serif; }
-h1, h2, h3	{ font-family: Archivo, Arial, sans-serif; }
-p			{ font-family: Archivo, Arial, sans-serif; }
-figcaption	{ font-family: Archivo-Italic, Arial, sans-serif; }
-
+body {
+  font-family: Tenor Sans, Arial, sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: Archivo, Arial, sans-serif;
+}
+p {
+  font-family: Archivo, Arial, sans-serif;
+}
+figcaption {
+  font-family: Archivo-Italic, Arial, sans-serif;
+}
 
 /*  default paragraph styling
 --------------------------------------------------------------------------------------- */
-p {margin: 0 0 1rem 0;}
+p {
+  margin: 0 0 1rem 0;
+}
 
 /* max-width sets line length */
-p {font-size: 1.5rem; line-height: 1.375em;}
+p {
+  font-size: 1.5rem;
+  line-height: 1.375em;
+}
 
 /* p { line-height: 2.0625rem; } */
 
 /*  link styling
 --------------------------------------------------------------------------------------- */
-a {color: #2b2d42; text-decoration: none;}
-a:visited {color: #2b2d42;}
-a:hover {color: #B6B8CF; text-decoration: underline;}
-a:active {color: #2A2C41;}
+a {
+  color: #2b2d42;
+  text-decoration: none;
+}
+a:visited {
+  color: #2b2d42;
+}
+a:hover {
+  color: #b6b8cf;
+  text-decoration: underline;
+}
+a:active {
+  color: #2a2c41;
+}
 
-nav a {color: #2b2d42; text-decoration: none;}
-nav a:visited {color: #2b2d42;}
-nav a:hover {color: #B6B8CF; text-decoration: underline;}
-nav a:active {color: #2A2C41;}
+nav a {
+  color: #2b2d42;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #2b2d42;
+}
+nav a:hover {
+  color: #b6b8cf;
+  text-decoration: underline;
+}
+nav a:active {
+  color: #2a2c41;
+}
 
 /* ------------------------------------------------------------------------------------
 tag and title styling (default / mobile)
 --------------------------------------------------------------------------------------- */
-h1.proj-title {font-size: 4rem; margin-bottom: 1rem;}
-h3.proj-title {font-size: 2rem; margin-bottom: 1rem;}
+h1.proj-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+h3.proj-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-ul.tags {list-style-type: none; max-width: 80%;}
-ul.tags li {display: inline; font-size: 1.3rem;
-	padding: 5px 25px 5px 25px;
-	line-height: 3rem;
-	margin-right: 12px;
-	border-radius: 30px;
-	margin-bottom: 5px;
-	border: 1px #2b2d42 solid;
-	white-space: nowrap;}
-ul.tags li a{color: #2b2d42; text-decoration: none;} 
-ul.tags li a:hover{color: #2b2d42; text-decoration: underline;}
-li.tag1 {background-color:#717394;}
-li.tag2 {background-color:#F6F6F3;}
-li.tag3 {background-color:#B6B8CF;}
-li.tag4 {background-color:#D8D77A;}
-li.tag5 {background-color:#D0B317;}
-li.tag6 {background-color:#bab600;}
-li.tag7 {background-color:#efab00;}
-li.tag8 {background-color:#E6743A;}
-li.tag9 {background-color:#eb9b8e;}
-li.tag10 {background-color:#ea5460;}
-
+ul.tags {
+  list-style-type: none;
+  max-width: 80%;
+}
+ul.tags li {
+  display: inline;
+  font-size: 1.3rem;
+  padding: 5px 25px 5px 25px;
+  line-height: 3rem;
+  margin-right: 12px;
+  border-radius: 30px;
+  margin-bottom: 5px;
+  border: 1px #2b2d42 solid;
+  white-space: nowrap;
+}
+ul.tags li a {
+  color: #2b2d42;
+  text-decoration: none;
+}
+ul.tags li a:hover {
+  color: #2b2d42;
+  text-decoration: underline;
+}
+li.tag1 {
+  background-color: #717394;
+}
+li.tag2 {
+  background-color: #f6f6f3;
+}
+li.tag3 {
+  background-color: #b6b8cf;
+}
+li.tag4 {
+  background-color: #d8d77a;
+}
+li.tag5 {
+  background-color: #d0b317;
+}
+li.tag6 {
+  background-color: #bab600;
+}
+li.tag7 {
+  background-color: #efab00;
+}
+li.tag8 {
+  background-color: #e6743a;
+}
+li.tag9 {
+  background-color: #eb9b8e;
+}
+li.tag10 {
+  background-color: #ea5460;
+}
 
 /* ------------------------------------------------------------------------------------
 top navigation section (default / mobile)
 --------------------------------------------------------------------------------------- */
 
-nav.main-nav { 
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-	grid-template-rows: auto;
-	grid-template-areas:
-			"brand burger"
-			"links links";
-	padding: .5rem; 
-	min-height: 2rem; 
-	background-color: transparent;
-	border-bottom: 1px #2A2C41 solid;
-	align-items: center;
+nav.main-nav {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "brand burger"
+    "links links";
+  padding: 0.5rem;
+  min-height: 2rem;
+  background-color: transparent;
+  border-bottom: 1px #2a2c41 solid;
+  align-items: center;
 }
 
-nav.main-nav .brand {grid-area: brand;}
-nav.main-nav .burger {grid-area: burger; text-align: right; cursor: pointer;}
-nav.main-nav .links-list {grid-area: links; display: none}
+nav.main-nav .brand {
+  grid-area: brand;
+}
+nav.main-nav .burger {
+  grid-area: burger;
+  text-align: right;
+  cursor: pointer;
+}
+nav.main-nav .links-list {
+  grid-area: links;
+  display: none;
+}
 
 /*  is-active toggled by JS when button pressed to show the links hidden above */
-.is-active {display: initial !important;}
+.is-active {
+  display: initial !important;
+}
 
-nav ul		{ list-style-type: none; }
-nav ul li	{ 
-	font-size: 1.75rem; 
-	text-align: center; 
-	border: none; 
-	border-bottom: 1px #2A2C41 solid;
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  font-size: 1.75rem;
+  text-align: center;
+  border: none;
+  border-bottom: 1px #2a2c41 solid;
 }
 
 nav ul li:first-of-type {
-	border: none;
-	border-bottom: 1px #2A2C41 solid;
-	border-top: 1px #2A2C41 solid;
+  border: none;
+  border-bottom: 1px #2a2c41 solid;
+  border-top: 1px #2a2c41 solid;
 }
 
 /*  hamburger styles and css anim */
-.burger-button {background-color: transparent; border: none; }
-
-.line {
-	fill: none;
-	stroke: #2b2d44;
-	stroke-width: 6;
-	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+.burger-button {
+  background-color: transparent;
+  border: none;
 }
 
-.line1, .line3 {
-	stroke-dasharray: 60 207;
-	stroke-width: 6;
+.line {
+  fill: none;
+  stroke: #2b2d44;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1,
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
 }
 
 .line2 {
-	stroke-dasharray: 60 60;
-	stroke-width: 6;
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
 }
 
-.opened .line1, .opened .line3 {
-	stroke-dasharray: 90 207;
-	stroke-dashoffset: -134;
-	stroke-width: 6;
+.opened .line1,
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
 }
 
 .opened .line2 {
-	stroke-dasharray: 1 60;
-	stroke-dashoffset: -30;
-	stroke-width: 6;
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
 }
-
-
 
 /* ------------------------------------------------------------------------------------
 New header section styles for home page (default / mobile)
 --------------------------------------------------------------------------------------- */
 
 section.header {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 8fr 2fr;
-	grid-template-areas:
-		"head"
-			"lnk";
-	height: 600px;
-	align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8fr 2fr;
+  grid-template-areas:
+    "head"
+    "lnk";
+  height: 600px;
+  align-items: center;
 }
 
 section.header h2 {
-	grid-area: head; 
-	font-size: 2.5rem; 
-	text-align: left; 
-	vertical-align: middle; 
-	padding-left: 1.5rem; 
-	padding-right: 1.5rem;
+  grid-area: head;
+  font-size: 2.5rem;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-section.header a {grid-area: lnk; text-align: center;}
+section.header a {
+  grid-area: lnk;
+  text-align: center;
+}
 
 /* ------------------------------------------------------------------------------------
 New project section styles for home page (default / mobile)
 --------------------------------------------------------------------------------------- */
 
 article.project {
-	display: grid;
-	grid-template-rows: auto;
-	grid-template-columns: auto;
-	grid-row-gap: 0rem;
-	grid-template-areas:
-		"pimage"
-		"ptext";
-	margin-bottom: 2.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-row-gap: 0rem;
+  grid-template-areas:
+    "pimage"
+    "ptext";
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-article.project:first-of-type{margin-top: 50px;}
-
-article.project .proj-image {grid-area: pimage;}
-
-article.project .proj-deets {
-	grid-area: ptext; 
-	background-color: #FBFBF9; 
-	padding: 1rem;
-	padding-top: 4rem;
-	padding-bottom: 4rem; 
-	border-radius: 0px; 
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
+article.project:first-of-type {
+  margin-top: 50px;
 }
 
 article.project .proj-image {
-	background-color: transparent;}
+  grid-area: pimage;
+}
+
+article.project .proj-deets {
+  grid-area: ptext;
+  background-color: #fbfbf9;
+  padding: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+article.project .proj-image {
+  background-color: transparent;
+}
 
 article.project .proj-image img {
-	border-radius: 0px;
-	border-top-left-radius: 8px; 
-	border-top-right-radius: 8px; 
+  border-radius: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 
-	object-fit: cover;
-	display: block; 
-	width: 100%;
+  object-fit: cover;
+  display: block;
+  width: 100%;
 }
 
 /* ------------------------------------------------------------------------------------
@@ -255,47 +376,51 @@ Project summary section for project pages (default/mobile)
 --------------------------------------------------------------------------------------- */
 
 section.summary {
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: auto;
-	grid-row-gap: 0rem;
-	grid-template-areas:
-		"ptt"
-		"pbrief";
-	margin-top: 1rem;
-	margin-bottom: 2.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto;
+  grid-row-gap: 0rem;
+  grid-template-areas:
+    "ptt"
+    "pbrief";
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 section.summary .title-tags {
-	grid-area: ptt;
-	background-color: transparent;
-	padding: 1rem;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-	border: 0;
-	border-radius: 0px;
-	border-bottom: 1px #2A2C41 solid;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+  grid-area: ptt;
+  background-color: transparent;
+  padding: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border: 0;
+  border-radius: 0px;
+  border-bottom: 1px #2a2c41 solid;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-section.summary .title-tags ul.tags {display: none;}
+section.summary .title-tags ul.tags {
+  display: none;
+}
 
 section.summary .proj-brief {
-	grid-area: pbrief;
-	background-color: transparent;
-	border: none;
-	border-radius: 0px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	margin-top: 2rem;
+  grid-area: pbrief;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-top: 2rem;
 }
-section.summary .proj-brief p {max-width: 80%;}
+section.summary .proj-brief p {
+  max-width: 80%;
+}
 section.case-study {
-	padding-left: 1rem;
-	padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* ------------------------------------------------------------------------------------
@@ -303,18 +428,47 @@ Project summary section for project pages (default/mobile)
 --------------------------------------------------------------------------------------- */
 
 section.gallery {
-	display: grid;
-	grid-template-rows: repeat(7, auto);
-	grid-template-columns: auto;
-	margin-top: 1rem;
-	margin-bottom: 2.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  display: grid;
+  grid-template-rows: repeat(7, auto);
+  grid-template-columns: auto;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-section.gallery figure img {width: 100%}
-section.gallery figure figcaption {height: 2rem;}
+section.gallery figure img {
+  width: 100%;
+}
+section.gallery figure figcaption {
+  height: 2rem;
+}
 
+/* ------------------------------------------------------------------------------------
+New header section styles for about page (default / mobile)
+--------------------------------------------------------------------------------------- */
+section.about {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 4rem;
+}
+
+section.about h1 {
+  font-size: 3rem;
+}
+
+section.about .about-profile {
+  width: 100%;
+  padding: 1rem;
+  margin-right: 2rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+section.about img {
+  width: 100%;
+  margin: 0px;
+}
 /* -------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 IMPORTANT: media query - switches on grid layout if page width is wider than 768px
@@ -322,86 +476,88 @@ IMPORTANT: media query - switches on grid layout if page width is wider than 768
 --------------------------------------------------------------------------------------- */
 
 @media (min-width: 768px) and (orientation: landscape) {
-
-
-/*  IMPORTANT: min-width:60em rule will stop the container from resizing  
+  /*  IMPORTANT: min-width:60em rule will stop the container from resizing  
 60rem = 960px
 90rem = 1440px
 --------------------------------------------------------------------------------------- */
 
-.container { min-width: 60rem; min-width: 0; padding-left: 1rem; padding-right: 1rem;}
+  .container {
+    min-width: 60rem;
+    min-width: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-
-
-/* ------------------------------------------------------------------------------------
+  /* ------------------------------------------------------------------------------------
 	top navigation styles (>768px screens)
---------------------------------------------------------------------------------------- */	
-	
-		nav.main-nav {
-			display: grid;
-			grid-template-columns: min-content auto;
-			grid-template-areas:
-				"brand links";
-			padding: .5rem;
-			min-height: 2rem;
-			background-color: transparent;
-			align-items: center;
-		}
-	
-		nav.main-nav .brand {
-			grid-area: brand;
-		}
-	
-		nav.main-nav .burger {
-			display: none;
-		}
-	
-		nav.main-nav .links-list {
-			grid-area: links; display: initial !important; 
-		}
+--------------------------------------------------------------------------------------- */
 
-nav ul {margin-left: 10px;}		
-nav ul li {
-	display: inline;
-	font-size: 1.75rem;
-	border: none;
-	border-right: 1px black solid;
-	padding-left: 29px;
-	padding-right: 29px;
-}
+  nav.main-nav {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-areas: "brand links";
+    padding: 0.5rem;
+    min-height: 2rem;
+    background-color: transparent;
+    align-items: center;
+  }
 
-nav ul li:first-of-type {
-	border: none;
-	border-right: 1px #2A2C41 solid;
-	border-left: 1px #2A2C41 solid;
-	}
+  nav.main-nav .brand {
+    grid-area: brand;
+  }
 
-/* ------------------------------------------------------------------------------------ 
+  nav.main-nav .burger {
+    display: none;
+  }
+
+  nav.main-nav .links-list {
+    grid-area: links;
+    display: initial !important;
+  }
+
+  nav ul {
+    margin-left: 10px;
+  }
+  nav ul li {
+    display: inline;
+    font-size: 1.75rem;
+    border: none;
+    border-right: 1px black solid;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  nav ul li:first-of-type {
+    border: none;
+    border-right: 1px #2a2c41 solid;
+    border-left: 1px #2a2c41 solid;
+  }
+
+  /* ------------------------------------------------------------------------------------ 
 New project section styles for home page (>768px screens)
---------------------------------------------------------------------------------------- */		
+--------------------------------------------------------------------------------------- */
 
-article.project {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-	grid-column-gap: 0rem;
-	grid-template-areas:
-			"pimage ptext";
-}
+  article.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0rem;
+    grid-template-areas: "pimage ptext";
+  }
 
-article.project .proj-image {
-	grid-area: pimage;
-}
+  article.project .proj-image {
+    grid-area: pimage;
+  }
 
-article.project .proj-image img {
-	border: none;
-	border-radius: 0px;
-	border-bottom-left-radius: 8px;
-	border-top-left-radius: 8px;
-}
+  article.project .proj-image img {
+    border: none;
+    border-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
 
-article.project .proj-deets{
-	grid-area: ptext;
+  article.project .proj-deets {
+    grid-area: ptext;
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 0px;
@@ -409,118 +565,134 @@ article.project .proj-deets{
     border-bottom-right-radius: 8px;
     display: grid;
     align-content: center;
-    min-height: 300px
-}
+    min-height: 300px;
+  }
 
-/* ------------------------------------------------------------------------------------
+  /* ------------------------------------------------------------------------------------
 Project summary section for project pages (>768 screens)
 --------------------------------------------------------------------------------------- */
 
-section.summary {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
-		grid-column-gap: 0rem;
-	grid-template-areas:
-		"ptt pbrief";
-	margin-top: 4rem;
-	margin-bottom: 2.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
+  section.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0rem;
+    grid-template-areas: "ptt pbrief";
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-section.summary .title-tags {
-	grid-area: ptt;
-	border: none;
-	border-radius: 0px;
-	border-right: 1px black solid;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-	text-align: right;
-	padding-right: 3rem;
-}
+  section.summary .title-tags {
+    grid-area: ptt;
+    border: none;
+    border-radius: 0px;
+    border-right: 1px black solid;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: right;
+    padding-right: 3rem;
+  }
 
-section.summary .title-tags ul.tags {display: initial; float: right;}
+  section.summary .title-tags ul.tags {
+    display: initial;
+    float: right;
+  }
 
-section.summary .proj-brief {
-	grid-area: pbrief;
-	border: none;
-	border-radius: 0px;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	padding-left: 2.5rem;
-	margin-top: 3rem;
-}
+  section.summary .proj-brief {
+    grid-area: pbrief;
+    border: none;
+    border-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+  }
 
-/* ------------------------------------------------------------------------------------
+  /* ------------------------------------------------------------------------------------
 Project summary section for project pages (>768 screens)
 --------------------------------------------------------------------------------------- */
 
+  section.gallery {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-section.gallery {
-	display: grid;
-	grid-template-rows: repeat(5, 1fr);
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 2rem;
-	margin-top: 1rem;
-	margin-bottom: 2.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
+  section.gallery figure:nth-child(1) {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 2;
+  }
 
-section.gallery figure:nth-child(1) {
-grid-row-start: 1;
-grid-column-start: 1;
-grid-column-end: 3;
-grid-row-end: 2;		
-}
+  section.gallery figure:nth-child(2) {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-end: 3;
+  }
 
-section.gallery figure:nth-child(2) {
-	grid-row-start: 1;
-		grid-column-start: 3;
-		grid-column-end: 5;
-		grid-row-end: 3;
-}
+  section.gallery figure:nth-child(3) {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 3;
+  }
 
-section.gallery figure:nth-child(3) {
-	grid-row-start: 2;
-		grid-column-start: 1;
-		grid-column-end: 3;
-		grid-row-end: 3;
-}
+  section.gallery figure:nth-child(4) {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 5;
+  }
 
-section.gallery figure:nth-child(4) {
-	grid-row-start: 3;
-		grid-column-start: 1;
-		grid-column-end: 5;
-		grid-row-end: 5;
-}
+  section.gallery figure:nth-child(5) {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 6;
+  }
 
-section.gallery figure:nth-child(5) {
-	grid-row-start: 5;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-end: 6;
-}
+  section.gallery figure:nth-child(6) {
+    grid-row-start: 5;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-end: 6;
+  }
 
-section.gallery figure:nth-child(6) {
-	grid-row-start: 5;
-		grid-column-start: 3;
-		grid-column-end: 5;
-		grid-row-end: 6;
-}
+  section.gallery figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-section.gallery figure img{
-	width: 100%; height: 100%; object-fit: cover;
-}
+  section.gallery figure figcaption {
+    height: 2rem;
+  }
 
-section.gallery figure figcaption {
-	height: 2rem;
-}
+  /* ------------------------------------------------------------------------------------
+	about page styles (>768px screens)
+--------------------------------------------------------------------------------------- */
 
+  section.about .about-profile {
+    width: 50%;
+    padding: 1rem;
+    background-color: white;
+    float: left !important;
+  }
 
- } /* end 768px media query */
-
+  section.about img {
+    max-width: 400px;
+    margin: 0px;
+  }
+} /* end 768px media query */
 
 /*  for big screens - currently just for testing
 --------------------------------------------------------------------------------------- 
