@@ -443,6 +443,21 @@ section.gallery {
   padding-right: 1rem;
 }
 
+section.video {
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+
+section.video iframe {
+  position:absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
 section.gallery figure img {
   width: 100%;
 }
