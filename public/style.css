@@ -140,13 +140,19 @@ nav a:active {
 /* ------------------------------------------------------------------------------------
 tag and title styling (default / mobile)
 --------------------------------------------------------------------------------------- */
-h1.proj-title {
+h1.proj-title, h1.about-title {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
+
 h3.proj-title {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+h3.about-name {
+  font-size: 2rem;
+  margin: 0;
 }
 
 ul.tags {
@@ -353,8 +359,8 @@ article.project .proj-deets {
   padding-top: 4rem;
   padding-bottom: 4rem;
   border-radius: 0px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 article.project .proj-image {
@@ -363,8 +369,8 @@ article.project .proj-image {
 
 article.project .proj-image img {
   border-radius: 0px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 
   object-fit: cover;
   display: block;
@@ -398,8 +404,8 @@ section.summary .title-tags {
   border: 0;
   border-radius: 0px;
   border-bottom: 1px #2a2c41 solid;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 section.summary .title-tags ul.tags {
@@ -411,8 +417,8 @@ section.summary .proj-brief {
   background-color: transparent;
   border: none;
   border-radius: 0px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin-top: 2rem;
 }
 section.summary .proj-brief p {
@@ -450,25 +456,33 @@ New header section styles for about page (default / mobile)
 section.about {
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-top: 4rem;
+  padding-bottom: 10rem;
+  margin-top: 6rem;
 }
 
-section.about h1 {
-  font-size: 3rem;
-}
-
-section.about .about-profile {
+figure.about-profile {
   width: 100%;
-  padding: 1rem;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
-section.about img {
+img.about-pic {
   width: 100%;
   margin: 0px;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
+
+figure.about-profile figcaption {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
 /* -------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 IMPORTANT: media query - switches on grid layout if page width is wider than 768px
@@ -552,8 +566,8 @@ New project section styles for home page (>768px screens)
   article.project .proj-image img {
     border: none;
     border-radius: 0px;
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
   }
 
   article.project .proj-deets {
@@ -561,8 +575,8 @@ New project section styles for home page (>768px screens)
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 0px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     display: grid;
     align-content: center;
     min-height: 300px;
@@ -589,8 +603,8 @@ Project summary section for project pages (>768 screens)
     border: none;
     border-radius: 0px;
     border-right: 1px black solid;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     text-align: right;
     padding-right: 3rem;
   }
@@ -604,8 +618,8 @@ Project summary section for project pages (>768 screens)
     grid-area: pbrief;
     border: none;
     border-radius: 0px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding-left: 2.5rem;
     margin-top: 3rem;
   }
@@ -681,17 +695,11 @@ Project summary section for project pages (>768 screens)
 	about page styles (>768px screens)
 --------------------------------------------------------------------------------------- */
 
-  section.about .about-profile {
-    width: 50%;
-    padding: 1rem;
+ figure.about-profile {
     background-color: white;
     float: left !important;
   }
 
-  section.about img {
-    max-width: 400px;
-    margin: 0px;
-  }
 } /* end 768px media query */
 
 /*  for big screens - currently just for testing
