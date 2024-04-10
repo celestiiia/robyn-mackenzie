@@ -696,7 +696,7 @@ Project summary section for project pages (>768 screens)
 --------------------------------------------------------------------------------------- */
 
  figure.about-profile {
-    background-color: white;
+    width: 35%;
     float: left !important;
   }
 
