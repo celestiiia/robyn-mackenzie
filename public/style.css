@@ -316,7 +316,7 @@ section.header {
 
 section.header h2 {
   grid-area: head;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: left;
   vertical-align: middle;
   padding-left: 1.5rem;
@@ -546,21 +546,28 @@ IMPORTANT: media query - switches on grid layout if page width is wider than 768
 
   nav ul {
     margin-left: 10px;
+    text-align: right;
   }
   nav ul li {
     display: inline;
     font-size: 1.75rem;
     border: none;
-    border-right: 1px black solid;
     padding-left: 29px;
     padding-right: 29px;
   }
 
   nav ul li:first-of-type {
     border: none;
-    border-right: 1px #2a2c41 solid;
-    border-left: 1px #2a2c41 solid;
   }
+
+/* ------------------------------------------------------------------------------------
+New header section styles for home page (<768px screens)
+--------------------------------------------------------------------------------------- */
+
+section.header h2 {
+  font-size: 3rem;
+
+}
 
   /* ------------------------------------------------------------------------------------ 
 New project section styles for home page (>768px screens)
