@@ -444,7 +444,7 @@ section.video iframe {
 }
 
 section.gallery figure iframe {
-  aspect-ratio: 1.23 / 1;
+  aspect-ratio: 608 / 499;
   width: 100%;
   height: auto;
   background-color: #2a2c41;
