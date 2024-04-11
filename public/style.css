@@ -375,7 +375,7 @@ Project summary section for project pages (default/mobile)
 
 section.summary {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-columns: auto;
   grid-row-gap: 0rem;
   grid-template-areas:
@@ -489,7 +489,28 @@ figure.about-profile figcaption {
   padding-bottom: 1.5rem;
 }
 
+/* ------------------------------------------------------------------------------------
+New header section styles for contact & 404 (default / mobile)
+--------------------------------------------------------------------------------------- */
+section.contact {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 10rem;
+  margin-top: 6rem;
+}
 
+section.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+section.contact p {
+  font-size: 2rem;
+}
+
+section.contact a {
+  text-decoration: underline;
+}
 /* -------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 IMPORTANT: media query - switches on grid layout if page width is wider than 768px
