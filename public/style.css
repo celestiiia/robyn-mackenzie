@@ -421,10 +421,15 @@ section.summary .proj-brief ul {
 section.case-study {
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 4.5rem;
 }
 
 section.case-study a {
   text-decoration: underline;
+}
+
+section.case-study h2 {
+  font-size: 2rem;
 }
 
 /* ------------------------------------------------------------------------------------
