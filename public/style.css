@@ -42,9 +42,9 @@ body {
 --------------------------------------------------------------------------------------- */
 .container {
   max-width: 80rem;
-}
-.container {
   margin: 0 auto;
+  margin-bottom: 20rem;
+
 }
 
 /* example web font styles using IBM Plex Sans
@@ -146,7 +146,7 @@ h1.proj-title, h1.about-title {
 }
 
 h3.proj-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -421,6 +421,10 @@ section.summary .proj-brief ul {
 section.case-study {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+section.case-study a {
+  text-decoration: underline;
 }
 
 /* ------------------------------------------------------------------------------------
