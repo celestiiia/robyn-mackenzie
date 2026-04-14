@@ -1,11 +1,44 @@
-/*  all the em measurements start from this setting
---------------------------------------------------------------------------------------- */
+/* =====================================================================
+   Design Tokens
+   ===================================================================== */
+:root {
+  --color-navy: #2b2d42;
+  --color-off-white: #f5f5f5;
+  --color-white: #ffffff;
+  --color-mid: #b6b8cf;
+  --color-card-bg: #fbfbf9;
+  --color-muted: #717394;
+
+  --text-hero: clamp(3rem, 8vw, 7rem);
+  --text-2xl:  4rem;
+  --text-xl:   3rem;
+  --text-lg:   2rem;
+  --text-md:   1.5rem;
+  --text-base: 1.125rem;
+  --text-sm:   1rem;
+  --text-xs:   0.875rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  --radius-md:   20px;
+  --radius-pill: 100px;
+  --transition-base: 200ms ease;
+}
+
+/* =====================================================================
+   Base font size (em measurements start from this)
+   ===================================================================== */
 html {
   font-size: 16px;
 }
 
-/*  global styles to reset default values
---------------------------------------------------------------------------------------- */
+/* =====================================================================
+   Reset
+   ===================================================================== */
 *,
 *:before,
 *:after {
@@ -34,185 +67,157 @@ a {
 }
 
 body {
-  background: #f5f5f5;
-  color: #2b2d42;
+  background: var(--color-off-white);
+  color: var(--color-navy);
 }
 
-/*  this sets page width: 60em = 960px,  80 = 1280px, 90 = 1440px
---------------------------------------------------------------------------------------- */
+/* =====================================================================
+   Container
+   ===================================================================== */
 .container {
   max-width: 80rem;
   margin: 0 auto;
-  margin-bottom: 10rem;
-
+  margin-bottom: var(--space-xl);
 }
 
-/* example web font styles using IBM Plex Sans
---------------------------------------------------------------------------------------- */
-/* archivo-regular - latin */
+/* =====================================================================
+   Web Fonts
+   ===================================================================== */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/archivo-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/archivo-v19-latin-regular.woff2") format("woff2");
 }
 
-/* archivo-italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Archivo";
   font-style: italic;
   font-weight: 400;
-  src: url("./fonts/archivo-v19-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/archivo-v19-latin-italic.woff2") format("woff2");
 }
 
-/* tenor-sans-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Tenor Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/tenor-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/tenor-sans-v19-latin-regular.woff2") format("woff2");
 }
 
+/* =====================================================================
+   Typography
+   ===================================================================== */
 body {
-  font-family: Tenor Sans, Arial, sans-serif;
+  font-family: "Tenor Sans", Arial, sans-serif;
 }
+
 h1,
 h2,
 h3 {
-  font-family: Archivo, Arial, sans-serif;
-}
-p {
-  font-family: Archivo, Arial, sans-serif;
-}
-figcaption {
-  font-family: Archivo-Italic, Arial, sans-serif;
+  font-family: "Archivo", Arial, sans-serif;
 }
 
-/*  default paragraph styling
---------------------------------------------------------------------------------------- */
 p {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-md);
+  line-height: 1.375em;
   margin: 0 0 1rem 0;
 }
 
-/* max-width sets line length */
-p {
-  font-size: 1.5rem;
-  line-height: 1.375em;
+figcaption {
+  font-family: "Archivo", Arial, sans-serif;
+  font-style: italic;
 }
 
-/* p { line-height: 2.0625rem; } */
+/* =====================================================================
+   Utility Classes
+   ===================================================================== */
+.body-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
 
-/*  link styling
---------------------------------------------------------------------------------------- */
+.label-text {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+/* =====================================================================
+   Links
+   ===================================================================== */
 a {
-  color: #2b2d42;
+  color: var(--color-navy);
   text-decoration: none;
 }
 a:visited {
-  color: #2b2d42;
+  color: var(--color-navy);
 }
 a:hover {
-  color: #b6b8cf;
+  color: var(--color-mid);
   text-decoration: underline;
 }
 a:active {
-  color: #2a2c41;
+  color: var(--color-navy);
 }
 
 nav a {
-  color: #2b2d42;
+  color: var(--color-navy);
   text-decoration: none;
 }
 nav a:visited {
-  color: #2b2d42;
+  color: var(--color-navy);
 }
 nav a:hover {
-  color: #b6b8cf;
+  color: var(--color-mid);
   text-decoration: underline;
 }
 nav a:active {
-  color: #2a2c41;
+  color: var(--color-navy);
 }
 
-/* ------------------------------------------------------------------------------------
-tag and title styling (default / mobile)
---------------------------------------------------------------------------------------- */
-h1.proj-title, h1.about-title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-h3.proj-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-h3.about-name {
-  font-size: 2rem;
+/* =====================================================================
+   Tags / Pills — monochrome
+   ===================================================================== */
+ul.tags {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
   margin: 0;
 }
 
-ul.tags {
-  list-style-type: none;
-  max-width: 80%;
-}
 ul.tags li {
-  display: inline;
-  font-size: 1.3rem;
-  padding: 5px 25px 5px 25px;
-  line-height: 3rem;
-  margin-right: 12px;
-  border-radius: 30px;
-  margin-bottom: 5px;
-  border: 1px #2b2d42 solid;
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xs);
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-navy);
+  background-color: transparent;
+  color: var(--color-navy);
   white-space: nowrap;
+  letter-spacing: 0.04em;
 }
+
 ul.tags li a {
-  color: #2b2d42;
+  color: var(--color-navy);
   text-decoration: none;
 }
+
 ul.tags li a:hover {
-  color: #2b2d42;
+  color: var(--color-navy);
   text-decoration: underline;
 }
-li.tag1 {
-  background-color: #717394;
-}
-li.tag2 {
-  background-color: #f6f6f3;
-}
-li.tag3 {
-  background-color: #b6b8cf;
-}
-li.tag4 {
-  background-color: #d8d77a;
-}
-li.tag5 {
-  background-color: #d0b317;
-}
-li.tag6 {
-  background-color: #bab600;
-}
-li.tag7 {
-  background-color: #efab00;
-}
-li.tag8 {
-  background-color: #e6743a;
-}
-li.tag9 {
-  background-color: #eb9b8e;
-}
-li.tag10 {
-  background-color: #ea5460;
-}
 
-/* ------------------------------------------------------------------------------------
-top navigation section (default / mobile)
---------------------------------------------------------------------------------------- */
-
+/* =====================================================================
+   Navigation — mobile (default)
+   ===================================================================== */
 nav.main-nav {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -223,24 +228,25 @@ nav.main-nav {
   padding: 0.5rem;
   min-height: 2rem;
   background-color: transparent;
-  border-bottom: 1px #2a2c41 solid;
+  border-bottom: 1px solid var(--color-navy);
   align-items: center;
 }
 
 nav.main-nav .brand {
   grid-area: brand;
 }
+
 nav.main-nav .burger {
   grid-area: burger;
   text-align: right;
   cursor: pointer;
 }
+
 nav.main-nav .links-list {
   grid-area: links;
   display: none;
 }
 
-/*  is-active toggled by JS when button pressed to show the links hidden above */
 .is-active {
   display: initial !important;
 }
@@ -248,12 +254,13 @@ nav.main-nav .links-list {
 nav ul {
   list-style-type: none;
 }
+
 nav ul li {
-  font-size: 1.75rem;
+  font-size: var(--text-md);
   text-align: right;
 }
 
-/*  hamburger styles and css anim */
+/* Hamburger button */
 .burger-button {
   background-color: transparent;
   border: none;
@@ -261,9 +268,10 @@ nav ul li {
 
 .line {
   fill: none;
-  stroke: #2b2d44;
+  stroke: var(--color-navy);
   stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -291,166 +299,306 @@ nav ul li {
   stroke-width: 6;
 }
 
-/* ------------------------------------------------------------------------------------
-New header section styles for home page (default / mobile)
---------------------------------------------------------------------------------------- */
-
-section.header {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 8fr 2fr;
-  grid-template-areas:
-    "head"
-    "lnk";
-  height: 600px;
-  align-items: center;
+/* =====================================================================
+   Hero Section (homepage)
+   ===================================================================== */
+section.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-sm) var(--space-sm) var(--space-lg);
 }
 
-section.header h2 {
-  grid-area: head;
-  font-size: 2rem;
-  text-align: left;
-  vertical-align: middle;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.hero-inner {
+  max-width: 100%;
 }
 
-section.header a {
-  grid-area: lnk;
-  text-align: center;
+h1.hero-name {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  margin-bottom: var(--space-md);
 }
 
-/* ------------------------------------------------------------------------------------
-New project section styles for home page (default / mobile)
---------------------------------------------------------------------------------------- */
+p.hero-tagline {
+  font-family: "Tenor Sans", Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  max-width: 36em;
+  color: var(--color-navy);
+  margin: 0;
+}
 
+/* =====================================================================
+   Projects Section (homepage) — mobile
+   ===================================================================== */
 article.project {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto;
-  grid-row-gap: 0rem;
   grid-template-areas:
     "pimage"
     "ptext";
-  margin-bottom: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
+
 article.project:first-of-type {
   margin-top: 50px;
 }
 
 article.project .proj-image {
   grid-area: pimage;
-}
-
-article.project .proj-deets {
-  grid-area: ptext;
-  background-color: #fbfbf9;
-  padding: 1rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  border-radius: 0px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-article.project .proj-image {
   background-color: transparent;
 }
 
 article.project .proj-image img {
-  border-radius: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-
+  border-radius: 0;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
   object-fit: cover;
   display: block;
   width: 100%;
 }
 
-/* ------------------------------------------------------------------------------------
-Project summary section for project pages (default/mobile)
---------------------------------------------------------------------------------------- */
+article.project .proj-deets {
+  grid-area: ptext;
+  background-color: var(--color-card-bg);
+  padding: var(--space-md) var(--space-md);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
 
-section.summary {
+h2.proj-title {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h2.proj-title a {
+  text-decoration: none;
+  color: var(--color-navy);
+}
+
+h2.proj-title a:hover {
+  color: var(--color-mid);
+  text-decoration: none;
+}
+
+p.proj-summary {
+  margin-bottom: 0;
+}
+
+.proj-link {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  color: var(--color-navy);
+  letter-spacing: 0.04em;
+  margin-top: var(--space-xs);
+}
+
+.proj-link:hover {
+  text-decoration: underline;
+  color: var(--color-navy);
+}
+
+/* =====================================================================
+   "Ping Me" Email Section (homepage)
+   ===================================================================== */
+section.ping-me {
+  padding: var(--space-xl) var(--space-sm);
+  border-top: 1px solid var(--color-navy);
+  margin-top: var(--space-xl);
+}
+
+h2.ping-heading {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  color: var(--color-navy);
+}
+
+.email-copy-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.email-address {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-md);
+  color: var(--color-navy);
+}
+
+.copy-btn {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition:
+    background var(--transition-base),
+    color var(--transition-base);
+}
+
+.copy-btn:hover {
+  background: var(--color-navy);
+  color: var(--color-off-white);
+}
+
+.copy-confirm {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.copy-confirm.visible {
+  opacity: 1;
+}
+
+/* =====================================================================
+   Project Pages — Hero + Meta
+   ===================================================================== */
+section.proj-hero {
+  padding: var(--space-lg) var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-navy);
+  margin-bottom: var(--space-md);
+}
+
+.proj-back {
+  margin-bottom: var(--space-sm);
+}
+
+.proj-back a {
+  text-decoration: none;
+  color: var(--color-muted);
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proj-back a:hover {
+  color: var(--color-navy);
+}
+
+h1.proj-hero-title {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: var(--space-sm) 0;
+}
+
+p.proj-hero-summary {
+  max-width: 42em;
+  font-size: var(--text-base);
+  margin: 0;
+}
+
+section.proj-meta {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  grid-row-gap: 0rem;
-  grid-template-areas:
-    "ptt"
-    "pbrief";
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-sm);
+  border-bottom: 1px solid var(--color-navy);
+  margin-bottom: var(--space-lg);
 }
 
-section.summary .title-tags {
-  grid-area: ptt;
-  background-color: transparent;
-  padding: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  border: 0;
-  border-radius: 0px;
-  border-bottom: 1px #2a2c41 solid;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+.proj-meta-item .label-text {
+  margin-bottom: 4px;
 }
 
-section.summary .title-tags ul.tags {
-  display: none;
+.proj-meta-item p {
+  font-size: var(--text-sm);
+  margin: 0;
 }
 
-section.summary .proj-brief {
-  grid-area: pbrief;
-  background-color: transparent;
-  border: none;
-  border-radius: 0px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-top: 2rem;
+section.proj-hero-image {
+  padding: 0 var(--space-sm);
+  margin-bottom: var(--space-lg);
 }
-section.summary .proj-brief ul {
-  max-width: 80%;
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
+
+section.proj-hero-image img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  display: block;
 }
+
+/* =====================================================================
+   Project Pages — Case Study
+   ===================================================================== */
 section.case-study {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 4.5rem;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  margin-bottom: var(--space-lg);
 }
 
 section.case-study a {
   text-decoration: underline;
 }
 
-section.case-study h2 {
-  font-size: 2rem;
+.case-block {
+  margin-bottom: var(--space-lg);
+  max-width: 72ch;
 }
 
-/* ------------------------------------------------------------------------------------
-Project summary section for project pages (default/mobile)
---------------------------------------------------------------------------------------- */
+h2.case-heading {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-navy);
+}
 
+/* Legacy case study h2 — for existing project pages */
+section.case-study h2 {
+  font-size: var(--text-lg);
+}
+
+/* =====================================================================
+   Project Pages — Gallery
+   ===================================================================== */
 section.gallery {
   display: grid;
   grid-template-rows: repeat(7, auto);
   grid-template-columns: auto;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
 
 section.video iframe {
-  aspect-ratio: 16 / 9 ;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width:100%;
+  aspect-ratio: 16 / 9;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  width: 100%;
   height: auto;
 }
 
@@ -458,100 +606,280 @@ section.gallery figure iframe {
   aspect-ratio: 608 / 499;
   width: 100%;
   height: auto;
-  background-color: #2a2c41;
+  background-color: var(--color-navy);
 }
 
 section.gallery figure img {
   width: 100%;
 }
+
 section.gallery figure figcaption {
   height: 2rem;
 }
 
-/* ------------------------------------------------------------------------------------
-New header section styles for about page (default / mobile)
---------------------------------------------------------------------------------------- */
-section.about {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 10rem;
-  margin-top: 6rem;
+/* =====================================================================
+   Project Pages — "Next project" nav
+   ===================================================================== */
+nav.proj-next {
+  padding: var(--space-lg) var(--space-sm);
+  border-top: 1px solid var(--color-navy);
+  margin-top: var(--space-xl);
 }
 
-figure.about-profile {
-  width: 100%;
-  margin-right: 1.5rem;
-  margin-bottom: 2rem;
-  background-color: white;
-  border-radius: 20px;
+.proj-next-link {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xl);
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+}
+
+.proj-next-link:hover {
+  color: var(--color-mid);
+  text-decoration: none;
+}
+
+/* =====================================================================
+   About Page — mobile
+   ===================================================================== */
+section.about {
+  padding: var(--space-lg) var(--space-sm);
+  padding-bottom: var(--space-xl);
+}
+
+.about-bio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heading"
+    "photo"
+    "text";
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+h1.about-heading {
+  grid-area: heading;
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.about-photo-wrap {
+  grid-area: photo;
+  max-width: 320px;
 }
 
 img.about-pic {
   width: 100%;
-  margin: 0px;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  border-radius: var(--radius-md);
+  display: block;
 }
 
-figure.about-profile figcaption {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
+.about-text {
+  grid-area: text;
 }
 
-/* ------------------------------------------------------------------------------------
-New header section styles for contact & 404 (default / mobile)
---------------------------------------------------------------------------------------- */
+.about-text p {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Skills */
+.about-skills {
+  margin-bottom: var(--space-xl);
+  border-top: 1px solid var(--color-navy);
+  padding-top: var(--space-md);
+}
+
+h2.about-section-heading {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  margin-bottom: var(--space-md);
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-item {
+  font-family: "Tenor Sans", Arial, sans-serif;
+  font-size: var(--text-md);
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radius-pill);
+}
+
+/* CV Download */
+.about-cv {
+  margin-bottom: var(--space-xl);
+  border-top: 1px solid var(--color-navy);
+  padding-top: var(--space-md);
+}
+
+.cv-download-btn {
+  display: inline-block;
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  padding: 10px 28px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition:
+    background var(--transition-base),
+    color var(--transition-base);
+  margin-bottom: var(--space-xs);
+}
+
+.cv-download-btn:hover {
+  background: var(--color-navy);
+  color: var(--color-off-white);
+  text-decoration: none;
+}
+
+.cv-note {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+/* FAQ Accordion */
+.about-faq {
+  border-top: 1px solid var(--color-navy);
+  padding-top: var(--space-md);
+}
+
+.accordion {
+  border-bottom: 1px solid var(--color-navy);
+}
+
+.accordion-item {
+  border-top: 1px solid var(--color-navy);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: var(--space-md) 0;
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-base);
+  color: var(--color-navy);
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-trigger:hover {
+  color: var(--color-muted);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+  margin-left: var(--space-sm);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-panel {
+  padding: 0 0 var(--space-md) 0;
+}
+
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.accordion-panel p {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =====================================================================
+   Contact Page
+   ===================================================================== */
 section.contact {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 10rem;
-  margin-top: 6rem;
+  padding: var(--space-lg) var(--space-sm);
+  padding-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
 }
 
-section.contact h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+h1.contact-heading {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-section.contact p {
-  font-size: 2rem;
+.contact-email-block,
+.contact-links-block {
+  border-top: 1px solid var(--color-navy);
+  padding-top: var(--space-md);
 }
 
-section.contact a {
+.contact-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.contact-link {
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: var(--text-md);
+  text-decoration: none;
+  color: var(--color-navy);
+}
+
+.contact-link:hover {
+  color: var(--color-mid);
   text-decoration: underline;
 }
-/* -------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-IMPORTANT: media query - switches on grid layout if page width is wider than 768px
-----------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------- */
 
+/* =====================================================================
+   404 Page
+   ===================================================================== */
+section.not-found {
+  padding: var(--space-lg) var(--space-sm);
+  padding-bottom: var(--space-xl);
+}
+
+/* =====================================================================
+   Media Query: Desktop (768px landscape)
+   ===================================================================== */
 @media (min-width: 768px) and (orientation: landscape) {
-  /*  IMPORTANT: min-width:60em rule will stop the container from resizing  
-60rem = 960px
-90rem = 1440px
---------------------------------------------------------------------------------------- */
 
   .container {
-    min-width: 60rem;
-    min-width: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  /* ------------------------------------------------------------------------------------
-	top navigation styles (>768px screens)
---------------------------------------------------------------------------------------- */
-
+  /* Navigation */
   nav.main-nav {
     display: grid;
     grid-template-columns: min-content auto;
     grid-template-areas: "brand links";
     padding: 0.5rem;
-    min-height: 2rem;
-    background-color: transparent;
     align-items: center;
   }
 
@@ -572,117 +900,56 @@ IMPORTANT: media query - switches on grid layout if page width is wider than 768
     margin-left: 10px;
     text-align: right;
   }
+
   nav ul li {
     display: inline;
-    font-size: 1.75rem;
+    font-size: var(--text-sm);
+    letter-spacing: 0.04em;
     border: none;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding-left: 1.5rem;
+    padding-right: 0;
   }
 
-  nav ul li:first-of-type {
-    border: none;
+  li.nav-external a::after {
+    content: " \2197";
+    font-size: 0.75em;
+    opacity: 0.6;
   }
 
-/* ------------------------------------------------------------------------------------
-New header section styles for home page (<768px screens)
---------------------------------------------------------------------------------------- */
-
-section.header h2 {
-  font-size: 3rem;
-
-}
-
-  /* ------------------------------------------------------------------------------------ 
-New project section styles for home page (>768px screens)
---------------------------------------------------------------------------------------- */
-
+  /* Project cards */
   article.project {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 0rem;
     grid-template-areas: "pimage ptext";
   }
 
-  article.project .proj-image {
-    grid-area: pimage;
-  }
-
   article.project .proj-image img {
-    border: none;
-    border-radius: 0px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 0;
+    border-bottom-left-radius: var(--radius-md);
+    border-top-left-radius: var(--radius-md);
   }
 
   article.project .proj-deets {
-    grid-area: ptext;
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 0px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    display: grid;
-    align-content: center;
-    min-height: 300px;
+    background-color: var(--color-white);
+    border-radius: 0;
+    border-bottom-right-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    padding: var(--space-lg);
+    min-height: 340px;
   }
 
-  /* ------------------------------------------------------------------------------------
-Project summary section for project pages (>768 screens)
---------------------------------------------------------------------------------------- */
-
-  section.summary {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 0rem;
-    grid-template-areas: "ptt pbrief";
-    margin-top: 4rem;
-    margin-bottom: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  /* Project meta — 4 columns on desktop */
+  section.proj-meta {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  section.summary .title-tags {
-    grid-area: ptt;
-    border: none;
-    border-radius: 0px;
-    border-right: 1px black solid;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    text-align: right;
-    padding-right: 3rem;
-  }
-
-  section.summary .title-tags ul.tags {
-    display: initial;
-    float: right;
-  }
-
-  section.summary .proj-brief {
-    grid-area: pbrief;
-    border: none;
-    border-radius: 0px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-left: 2.5rem;
-    margin-top: 4rem;
-  }
-
-  /* ------------------------------------------------------------------------------------
-Project summary section for project pages (>768 screens)
---------------------------------------------------------------------------------------- */
-
+  /* Gallery */
   section.gallery {
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   section.gallery figure:nth-child(1) {
@@ -735,21 +1002,17 @@ Project summary section for project pages (>768 screens)
     height: 2rem;
   }
 
-  /* ------------------------------------------------------------------------------------
-	about page styles (>768px screens)
---------------------------------------------------------------------------------------- */
+  /* About page — photo + bio side by side */
+  .about-bio {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "heading heading"
+      "photo text";
+    gap: var(--space-lg);
+  }
 
- figure.about-profile {
-    width: 35%;
-    float: left !important;
+  .about-photo-wrap {
+    max-width: none;
   }
 
 } /* end 768px media query */
-
-/*  for big screens - currently just for testing
---------------------------------------------------------------------------------------- 
-@media (min-width: 18000px) {
-	html { font-size: 24px; }
-}
-
-*/

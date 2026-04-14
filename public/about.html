@@ -11,14 +11,15 @@
 
 <body>
   <div class="container">
+
     <nav class="main-nav" role="navigation">
       <div class="brand">
-        <a href="index.html"><img src="logo.svg" 
-          alt="triangle with all three sides equal" 
-          height="75px"
-          width="175px" />
+        <a href="index.html">
+          <img src="logo.svg"
+            alt="Robyn Mackenzie logo"
+            height="75px"
+            width="175px" />
         </a>
-
       </div>
 
       <div class="burger">
@@ -35,42 +36,109 @@
 
       <div id="menu-links" class="links-list" aria-expanded="false" aria-label="main menu">
         <ul>
-          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#projects">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="nav-external"><a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li class="nav-external"><a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
-    </nav>
-    <!-- end nav -->
+    </nav><!-- end nav -->
 
     <section class="about">
-      <figure class="about-profile">
-        <img src="./image/robyn.png" class="about-pic">
-        <figcaption>
-          <h3 class="about-name">// Robyn Mackenzie</a></h3>
-          <ul class="tags">
-            <li class="tag7">she/her</li>
-            <li class="tag10">designer</li>
-            <li class="tag6">user researcher</li>
-          </ul>
-        </figcaption>
-      </figure>
-      <h1 class="about-title">Hello there, </br> I'm Robyn.</h1>
-      <p> I’m a 21-year-old graphic design student, passionate about creating positive social
-        and system change: I am currently in my 2nd year of a BA (hons) graphic design degree
-        at Arts University Bournemouth.</p>
-      <br>
-      <p>Outside of uni I am a digital projects support officer for my local NHS trust and
-        help manage the day-to-day runnings of projects, facilitating UAT sessions and
-        carrying out functional and quality assurance testing.</p>
-      <br>
-      <p>I'm from Dorset -born and bred. I love dogs, making borderline-baked cookies,
-        volunteering at parkrun, rollerskating (one-day roller derby player, I hope!)
-        and eating lots and lots of noodles. My more designer-like interests centre around
-        user research & testing, human-centred design, service design and digital transformation.</p>
+
+      <!-- Bio -->
+      <div class="about-bio">
+        <h1 class="about-heading">About</h1>
+
+        <div class="about-photo-wrap">
+          <img src="./image/robyn.png" class="about-pic" alt="Photo of Robyn Mackenzie" />
+        </div>
+
+        <div class="about-text">
+          <p>I'm Robyn, a Dorset-based designer and user researcher currently completing a BA in Graphic Design at Arts University Bournemouth.</p>
+          <br>
+          <p>I work as a freelance content designer with a focus on accessibility and usability — I'm interested in how plain language and clear structure can make services genuinely work for the people who use them.</p>
+          <br>
+          <p>Previously I supported digital transformation projects at an NHS trust, helping teams run UAT, carry out functional testing, and manage the day-to-day of complex service change.</p>
+          <br>
+          <p>Outside of work: Dorset coastlines, borderline-baked cookies, parkrun volunteering, rollerskating, and a lot of noodles.</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="about-skills">
+        <h2 class="about-section-heading">Skills</h2>
+        <ul class="skills-list">
+          <li class="skill-item">Design Research</li>
+          <li class="skill-item">Service Design</li>
+          <li class="skill-item">Strategy</li>
+          <li class="skill-item">Brand Identity</li>
+          <li class="skill-item">Content Design</li>
+        </ul>
+      </div>
+
+      <!-- CV Download -->
+      <div class="about-cv">
+        <h2 class="about-section-heading">CV</h2>
+        <a href="./robyn-mackenzie-cv.pdf" class="cv-download-btn" download>
+          Download CV (PDF)
+        </a>
+        <p class="cv-note">Updated 2025</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="about-faq">
+        <h2 class="about-section-heading">FAQ</h2>
+
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              Are you available for freelance work?
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" hidden>
+              <p>Yes — I take on content design, UX research, and service design projects. Get in touch via the <a href="contact.html">contact page</a>.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              What tools do you use?
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" hidden>
+              <p>Figma for design and prototyping, Miro for workshops and mapping, and occasionally code (HTML/CSS) for front-end experimentation.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              What kind of projects do you work on?
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" hidden>
+              <p>I'm most interested in work that sits at the intersection of design and service delivery — particularly in public and third-sector contexts. That said, I'm always open to a good brief.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              Where are you based?
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" hidden>
+              <p>Dorset, UK. I work remotely and am happy to travel for the right project.</p>
+            </div>
+          </div>
+
+        </div><!-- end accordion -->
+      </div>
+
     </section>
 
-  </div>
+  </div><!-- end container -->
 </body>
 
 </html>
