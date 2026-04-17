@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Robyn Mackenzie | Resonance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,700&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
-  <script src="navbar.js"></script>
+  <script src="navbar.js" defer></script>
 </head>
-
 <body>
-  <div class="container">
 
-    <nav class="main-nav" role="navigation">
-      <div class="brand">
-        <a href="index.html">
-          <img src="logo.svg"
-            alt="Robyn Mackenzie logo"
-            height="75px"
-            width="175px" />
-        </a>
-      </div>
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">RM</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener" class="nav-external">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener" class="nav-external">Instagram</a>
+    </div>
+    <button class="nav-burger" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="nav-mobile-header">
+      <a href="index.html" class="nav-logo">RM</a>
+      <button class="nav-mobile-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html#work">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
 
-      <div class="burger">
-        <a role="button" class="burger-button" aria-expanded="false" data-target="menu-links">
-          <svg width="50" height="50" viewBox="0 0 100 100">
-            <path class="line line1"
-              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-            <path class="line line2" d="M 20,50 H 80" />
-            <path class="line line3"
-              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-          </svg>
-        </a>
-      </div>
-
-      <div id="menu-links" class="links-list" aria-expanded="false" aria-label="main menu">
-        <ul>
-          <li><a href="index.html#projects">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-external"><a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li class="nav-external"><a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a></li>
-        </ul>
-      </div>
-    </nav><!-- end nav -->
+  <main class="proj-page">
 
     <section class="proj-hero">
-      <p class="proj-back label-text"><a href="index.html#projects">← Work</a></p>
+      <a href="index.html#work" class="proj-back">← Work</a>
       <h1 class="proj-hero-title">Resonance</h1>
-      <p class="proj-hero-summary body-text">[One sentence overview of the project — what it is and what you did.]</p>
+      <p class="proj-hero-summary">[One sentence overview — what it is and what you did.]</p>
     </section>
 
-    <section class="proj-meta">
+    <div class="proj-meta">
       <div class="proj-meta-item">
-        <p class="label-text">Role</p>
-        <p>[e.g. UX/UI, Strategy]</p>
+        <p class="proj-meta-label">Role</p>
+        <p class="proj-meta-value">[e.g. UX/UI, Strategy]</p>
       </div>
       <div class="proj-meta-item">
-        <p class="label-text">Year</p>
-        <p>[Year]</p>
+        <p class="proj-meta-label">Year</p>
+        <p class="proj-meta-value">[Year]</p>
       </div>
       <div class="proj-meta-item">
-        <p class="label-text">Type</p>
-        <p>[e.g. University project, Freelance]</p>
+        <p class="proj-meta-label">Type</p>
+        <p class="proj-meta-value">[e.g. University]</p>
       </div>
       <div class="proj-meta-item">
-        <p class="label-text">Tools</p>
-        <p>[e.g. Figma, Miro]</p>
+        <p class="proj-meta-label">Tools</p>
+        <p class="proj-meta-value">[e.g. Figma, Miro]</p>
       </div>
-    </section>
+    </div>
 
-    <section class="proj-hero-image">
-      <img src="./image/resonance_hero.jpg" alt="[Description of hero image]" />
-    </section>
+    <img src="./image/resonance_hero.jpg" alt="Resonance project hero image" class="proj-hero-img" />
 
-    <section class="case-study">
-
+    <section class="proj-case">
       <div class="case-block">
         <h2 class="case-heading">Overview</h2>
         <p>[Content goes here]</p>
       </div>
-
       <div class="case-block">
         <h2 class="case-heading">Research</h2>
         <p>[Content goes here]</p>
       </div>
-
       <div class="case-block">
         <h2 class="case-heading">Design</h2>
         <p>[Content goes here]</p>
       </div>
-
       <div class="case-block">
         <h2 class="case-heading">Outcome</h2>
         <p>[Content goes here]</p>
       </div>
-
     </section>
 
-    <section class="gallery">
-      <!-- Add figure elements with images here -->
-    </section>
+    <section class="proj-gallery"></section>
 
-    <nav class="proj-next">
-      <p class="label-text">Next project</p>
+    <nav class="proj-next" aria-label="Next project">
+      <p class="proj-next-label">Next project</p>
       <a href="project_tally.html" class="proj-next-link">Tally →</a>
     </nav>
 
-  </div><!-- end container -->
-</body>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-cta">
+        <p class="footer-cta-text">Interested in turning good ideas into great experiences? Get in touch.</p>
+        <div class="footer-cta-actions">
+          <div class="footer-available">
+            <div class="footer-pulse"><div class="footer-pulse-dot"></div><div class="footer-pulse-ring"></div></div>
+            <span class="footer-available-text">Available For Work</span>
+          </div>
+          <a href="contact.html" class="footer-contact-btn">Contact Me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-email">email: mail@robynmackenzie.com</span>
+        <span class="footer-copy">RM ©2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

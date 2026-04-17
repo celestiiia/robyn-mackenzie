@@ -1,137 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Robyn Mackenzie | Portfolio</title>
-	<link href="style.css" rel="stylesheet">
-	<script src="navbar.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robyn Mackenzie | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,700&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="navbar.js" defer></script>
 </head>
-
 <body>
 
-	<div class="container">
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">RM</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener" class="nav-external">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener" class="nav-external">Instagram</a>
+    </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
 
-		<nav class="main-nav" role="navigation">
+  <!-- Mobile full-screen menu -->
+  <div class="nav-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="nav-mobile-header">
+      <a href="index.html" class="nav-logo">RM</a>
+      <button class="nav-mobile-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
 
-			<div class="brand">
-				<a href="index.html">
-					<img
-						src="logo.svg"
-						alt="Robyn Mackenzie logo"
-						height="75px"
-						width="175px" />
-				</a>
-			</div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-profile">
+      <div class="hero-name">
+        <h1>Robyn<br>Mackenzie</h1>
+      </div>
+      <img
+        src="./image/robyn.png"
+        alt="Photo of Robyn Mackenzie"
+        class="hero-avatar"
+      />
+    </div>
+    <div class="hero-bio">
+      <div class="email-row">
+        <span class="email-text">mail@robynmackenzie.com</span>
+        <button class="copy-btn" data-email="mail@robynmackenzie.com" aria-label="Copy email address">Copy</button>
+        <span class="copy-confirm" aria-live="polite">Copied!</span>
+      </div>
+      <p class="hero-tagline">
+        Hello there — I'm a designer and user researcher driven by a belief that better services build a better world. Let's make it happen together!
+      </p>
+    </div>
+  </section>
 
-			<div class="burger">
-				<a role="button" class="burger-button" aria-expanded="false" data-target="menu-links">
-					<svg width="50" height="50" viewBox="0 0 100 100">
-						<path class="line line1"
-							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-						<path class="line line2" d="M 20,50 H 80" />
-						<path class="line line3"
-							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-					</svg>
-				</a>
-			</div>
+  <div class="divider"></div>
 
-			<div id="menu-links" class="links-list" aria-expanded="false" aria-label="main menu">
-				<ul>
-					<li><a href="index.html#projects">Work</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li class="nav-external"><a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a></li>
-					<li class="nav-external"><a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a></li>
-				</ul>
-			</div>
+  <!-- Work -->
+  <section class="section-work" id="work">
+    <div class="section-header">
+      <span class="section-label">work.</span>
+      <a href="index.html#work" class="cv-btn">Show All</a>
+    </div>
+    <div class="work-grid">
 
-		</nav><!-- end nav -->
+      <a href="project_tally.html" class="work-card">
+        <img src="./image/tally_hero.jpg" alt="Tally project" class="work-card-img" />
+        <div class="work-card-overlay">
+          <h2 class="work-card-title">Tally</h2>
+        </div>
+      </a>
 
-		<section class="hero">
-			<div class="hero-inner">
-				<h1 class="hero-name">Robyn Mackenzie</h1>
-				<p class="hero-tagline">a designer and user researcher driven by a belief that better services build a better world</p>
-			</div>
-		</section>
+      <a href="project_200.html" class="work-card">
+        <img src="./image/200_hero.jpg" alt="200 project" class="work-card-img" />
+        <div class="work-card-overlay">
+          <h2 class="work-card-title">200</h2>
+        </div>
+      </a>
 
-		<section id="projects" class="projects">
+      <a href="project_siloed.html" class="work-card">
+        <img src="./image/siloed_hero.jpg" alt="Siloed Systems project" class="work-card-img" />
+        <div class="work-card-overlay">
+          <h2 class="work-card-title">Siloed Systems</h2>
+        </div>
+      </a>
 
-			<article class="project">
-				<div class="proj-image">
-					<a href="project_tally.html">
-						<img src="./image/tally_hero.jpg"
-							alt="Hero image for the Tally project" />
-					</a>
-				</div>
-				<div class="proj-deets">
-					<p class="label-text">UX Research · Service Design</p>
-					<h2 class="proj-title"><a href="project_tally.html">Tally</a></h2>
-					<p class="proj-summary body-text">[One-line project summary — to be updated]</p>
-					<a href="project_tally.html" class="proj-link">View project →</a>
-				</div>
-			</article>
+      <a href="project_resonance.html" class="work-card">
+        <img src="./image/resonance_hero.jpg" alt="Resonance project" class="work-card-img" />
+        <div class="work-card-overlay">
+          <h2 class="work-card-title">Resonance</h2>
+        </div>
+      </a>
 
-			<article class="project">
-				<div class="proj-image">
-					<a href="project_200.html">
-						<img src="./image/200_hero.jpg"
-							alt="Hero image for the 200 project" />
-					</a>
-				</div>
-				<div class="proj-deets">
-					<p class="label-text">Brand Identity · Content Design</p>
-					<h2 class="proj-title"><a href="project_200.html">200</a></h2>
-					<p class="proj-summary body-text">[One-line project summary — to be updated]</p>
-					<a href="project_200.html" class="proj-link">View project →</a>
-				</div>
-			</article>
+    </div>
+  </section>
 
-			<article class="project">
-				<div class="proj-image">
-					<a href="project_siloed.html">
-						<img src="./image/siloed_hero.jpg"
-							alt="Hero image for the Siloed Systems project" />
-					</a>
-				</div>
-				<div class="proj-deets">
-					<p class="label-text">Dissertation · Design Research</p>
-					<h2 class="proj-title"><a href="project_siloed.html">Siloed Systems</a></h2>
-					<p class="proj-summary body-text">[One-line project summary — to be updated]</p>
-					<a href="project_siloed.html" class="proj-link">View project →</a>
-				</div>
-			</article>
+  <div class="divider"></div>
 
-			<article class="project">
-				<div class="proj-image">
-					<a href="project_resonance.html">
-						<img src="./image/resonance_hero.jpg"
-							alt="Hero image for the Resonance project" />
-					</a>
-				</div>
-				<div class="proj-deets">
-					<p class="label-text">UX/UI · Strategy</p>
-					<h2 class="proj-title"><a href="project_resonance.html">Resonance</a></h2>
-					<p class="proj-summary body-text">[One-line project summary — to be updated]</p>
-					<a href="project_resonance.html" class="proj-link">View project →</a>
-				</div>
-			</article>
+  <!-- About teaser -->
+  <section class="section-work" id="about-teaser">
+    <div class="section-header">
+      <span class="section-label">about.</span>
+      <a href="about.html" class="cv-btn">Show More</a>
+    </div>
+    <p class="text-bxl" style="max-width: 728px;">
+      I utilise visual design to make complex ideas clearer, enabling teams to understand research, map systems, and communicate solutions in a more relatable way.
+    </p>
+  </section>
 
-		</section><!-- end projects -->
+  <div class="divider"></div>
 
-		<section class="ping-me">
-			<p class="label-text">Got a project in mind?</p>
-			<h2 class="ping-heading">PING ME / AN EMAIL :)</h2>
-			<div class="email-copy-wrap">
-				<span class="email-address">mail@robynmackenzie.com</span>
-				<button class="copy-btn" data-email="mail@robynmackenzie.com" aria-label="Copy email address to clipboard">Copy</button>
-				<span class="copy-confirm" aria-live="polite" aria-atomic="true">Copied!</span>
-			</div>
-		</section>
+  <!-- Ping Me -->
+  <section class="ping-me" id="contact-teaser">
+    <p class="text-label">Got a project in mind?</p>
+    <p class="ping-me-heading">PING ME /<br>AN EMAIL :)</p>
+    <div class="email-row">
+      <span class="email-text">mail@robynmackenzie.com</span>
+      <button class="copy-btn" data-email="mail@robynmackenzie.com" aria-label="Copy email address">Copy</button>
+      <span class="copy-confirm" aria-live="polite">Copied!</span>
+    </div>
+  </section>
 
-	</div><!-- end container -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-cta">
+        <p class="footer-cta-text">Interested in turning good ideas into great experiences? Get in touch.</p>
+        <div class="footer-cta-actions">
+          <div class="footer-available">
+            <div class="footer-pulse">
+              <div class="footer-pulse-dot"></div>
+              <div class="footer-pulse-ring"></div>
+            </div>
+            <span class="footer-available-text">Available For Work</span>
+          </div>
+          <a href="contact.html" class="footer-contact-btn">Contact Me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-email">email: mail@robynmackenzie.com</span>
+        <span class="footer-copy">RM ©2026</span>
+      </div>
+    </div>
+  </footer>
 
 </body>
-
 </html>
