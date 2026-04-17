@@ -1,27 +1,96 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Get all "burger-button" elements
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll('.burger-button'),
-    0
-  );
+// =====================================================================
+// Mobile Navigation Toggle
+// =====================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".nav-burger");
+  const closeBtn = document.querySelector(".nav-mobile-close");
+  const mobileMenu = document.querySelector(".nav-mobile-menu");
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
-        // Get the target from the "data-target" attribute (menu-links)
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+  function openMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+  }
+  function closeMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+  }
 
-        // Toggle the "is-active" and "opened" class on both the "burger-button" and the "menu-links"
-        el.classList.toggle('opened');
-        $target.classList.toggle('is-active');
+  if (burger) burger.addEventListener("click", openMenu);
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
 
-        // Toggle accessibility labels so screen readers know when menus are expanded or not
-        el.ariaExpanded = el.ariaExpanded !== 'true';
-        $target.ariaExpanded = $target.ariaExpanded !== 'true';
-      });
+  // Close on link click
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
     });
   }
+
+  // Keyboard: Escape closes menu
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+});
+
+// =====================================================================
+// Copy-to-Clipboard (email)
+// =====================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const email = btn.dataset.email;
+      const confirm = btn.nextElementSibling;
+
+      const show = () => {
+        if (confirm?.classList.contains("copy-confirm")) {
+          confirm.classList.add("visible");
+          setTimeout(() => confirm.classList.remove("visible"), 2000);
+        }
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(show).catch(() => fallback(email, show));
+      } else {
+        fallback(email, show);
+      }
+    });
+  });
+
+  function fallback(text, cb) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.cssText = "position:fixed;opacity:0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); cb(); } catch (e) { console.warn(e); }
+    document.body.removeChild(ta);
+  }
+});
+
+// =====================================================================
+// FAQ Accordion
+// =====================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const expanded = trigger.getAttribute("aria-expanded") === "true";
+      const panel = trigger.nextElementSibling;
+
+      // Close all
+      document.querySelectorAll(".faq-trigger").forEach((t) => {
+        t.setAttribute("aria-expanded", "false");
+        const p = t.nextElementSibling;
+        if (p) p.hidden = true;
+      });
+
+      // Open clicked
+      if (!expanded) {
+        trigger.setAttribute("aria-expanded", "true");
+        if (panel) panel.hidden = false;
+      }
+    });
+  });
 });

@@ -1,67 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Robyn Mackenzie | Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="style.css" rel="stylesheet" />
-    <script src="navbar.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robyn Mackenzie | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,700&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="navbar.js" defer></script>
+</head>
+<body>
 
-  <body>
-    <div class="container">
-      <nav class="main-nav" role="navigation">
-        <div class="brand">
-          <a href="index.html"><img 
-            src="logo.svg" 
-            alt="triangle with all three sides equal"
-            height="75px"
-            width="175px" /></a>
-        </div>
-
-        <div class="burger">
-          <a
-            role="button"
-            class="burger-button"
-            aria-expanded="false"
-            data-target="menu-links"
-          >
-            <svg width="50" height="50" viewBox="0 0 100 100">
-              <path
-                class="line line1"
-                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-              />
-              <path class="line line2" d="M 20,50 H 80" />
-              <path
-                class="line line3"
-                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <div
-          id="menu-links"
-          class="links-list"
-          aria-expanded="false"
-          aria-label="main menu"
-        >
-          <ul>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- end nav -->
-
-      <section class="contact">
-        <h2>Hey you, you wanna get in touch?</h2>
-        <p>Best way to reach me is to message me on LinkedIn. You can do that <a href="https://www.linkedin.com/in/robynjmackenzie/">here</a>!</p>
-        <p> You can also follow me on socials, but be warned I don't talk much design on those.</p>
-        <br>
-        <p> <a href="https://twitter.com/RobynLost">twitter</a> // <a href="https://www.instagram.com/sleepyrobyn/">instagram</a> // <a href="https://medium.com/@robynmackenzie">medium</a></p>
-      </section>
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">RM</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener" class="nav-external">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener" class="nav-external">Instagram</a>
     </div>
-  </body>
+    <button class="nav-burger" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="nav-mobile-header">
+      <a href="index.html" class="nav-logo">RM</a>
+      <button class="nav-mobile-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+
+  <!-- Page hero — "PING ME / AN EMAIL :)" in Heading 1, centred, matches Framer contact page -->
+  <div class="page-hero-title">
+    PING&nbsp;&nbsp;ME /<br>AN&nbsp;&nbsp;EMAIL&nbsp;:)
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Contact body -->
+  <main class="contact-page">
+    <div class="contact-body">
+
+      <div class="contact-email-block">
+        <p class="text-label">Email</p>
+        <div class="email-row" style="margin-top: 12px;">
+          <span class="email-text">mail@robynmackenzie.com</span>
+          <button class="copy-btn" data-email="mail@robynmackenzie.com" aria-label="Copy email address">Copy</button>
+          <span class="copy-confirm" aria-live="polite">Copied!</span>
+        </div>
+      </div>
+
+      <div class="contact-elsewhere">
+        <p class="text-label">Elsewhere</p>
+        <ul class="contact-links-list">
+          <li>
+            <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener" class="contact-link">
+              LinkedIn ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener" class="contact-link">
+              Instagram ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/robynjmackenzie/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/sleepyrobyn/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-cta">
+        <p class="footer-cta-text">Interested in turning good ideas into great experiences? Get in touch.</p>
+        <div class="footer-cta-actions">
+          <div class="footer-available">
+            <div class="footer-pulse">
+              <div class="footer-pulse-dot"></div>
+              <div class="footer-pulse-ring"></div>
+            </div>
+            <span class="footer-available-text">Available For Work</span>
+          </div>
+          <a href="contact.html" class="footer-contact-btn">Contact Me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-email">email: mail@robynmackenzie.com</span>
+        <span class="footer-copy">RM ©2026</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
